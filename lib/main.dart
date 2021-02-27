@@ -101,6 +101,11 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
+    //定义富文本样式
+    TextStyle greenStyle = TextStyle(fontWeight: FontWeight.normal, fontSize: 20, color: Colors.green);
+    TextStyle redStyle = TextStyle(fontWeight: FontWeight.normal, fontSize: 18, color: Colors.red);
+
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -118,7 +123,19 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.blueGrey),
             ),
+            Text.rich(
+              TextSpan(
+                children: <TextSpan>[
+                  TextSpan(text: 'android 测试', style: redStyle),
+                  TextSpan(text: ' iOS 测试 ', style: greenStyle),
+                  TextSpan(text: 'flutter', style: redStyle),
+                ]
+              ),
+              textAlign: TextAlign.center,
+            ),  //富文本
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
