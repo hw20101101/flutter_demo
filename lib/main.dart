@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 void main() {
   runApp(MyApp());
@@ -146,8 +147,15 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
               fit: BoxFit.contain,
               width: 200,
               height: 200,
-            ), //加载网络图片
-            Image(image: AssetImage("images/girl.jpg"), width:100) //加载本地图片
+            ),
+            //加载网络图片
+            Image(image: AssetImage("images/girl.jpg"), width:100), //加载本地图片
+            //模拟网络图片加载出错
+            CachedNetworkImage(imageUrl: "http://xxx/xxx/jpg",
+              placeholder: (context, url) => CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Icon(Icons.error),
+            )
+
           ],
         ),
       ),
