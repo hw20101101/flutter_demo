@@ -60,6 +60,14 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+
+      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+        print(" 单次 Frame 绘制回调 "); // 只回调一次
+      });
+
+      WidgetsBinding.instance.addPersistentFrameCallback((timeStamp) {
+        print("实时 frame 绘制回调"); // 每帧都回调
+      });
     });
   }
 
