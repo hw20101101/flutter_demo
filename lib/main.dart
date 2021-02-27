@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
               style: Theme.of(context).textTheme.headline4,
             ),
             FadeInImage.assetNetwork(
-              placeholder: 'assets/girl.jpg',
+              placeholder: 'images/girl.jpg',
               image: 'http://img0.pcbaby.com.cn/pcbaby/1211/20/1156867_2011051508044096.jpg',
               fit: BoxFit.contain,
               width: 200,
