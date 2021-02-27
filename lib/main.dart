@@ -146,7 +146,8 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
               fit: BoxFit.contain,
               width: 200,
               height: 200,
-            )
+            ), //加载网络图片
+            Image(image: AssetImage("images/girl.jpg"), width:100) //加载本地图片
           ],
         ),
       ),
