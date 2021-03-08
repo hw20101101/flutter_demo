@@ -109,19 +109,27 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     TextStyle redStyle = TextStyle(
         fontWeight: FontWeight.normal, fontSize: 18, color: Colors.red);
 
+    //定义下划线用于复用
+    var divider1 = Divider(color: Colors.red);
+    var divider2 = Divider(color: Colors.green);
+
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: ListView.builder(
+      body: ListView.separated(
         itemCount: 10,
-        itemExtent: 50,
-        itemBuilder: (BuildContext content, int index) => ListTile(
-          title: Text('title $index'),
-          subtitle: Text('body $index'),
+
+        //列表项构造器
+        itemBuilder: (BuildContext context, int index) => ListTile(
+          title: Text('index: $index'),
         ),
+
+        //分割线构造器
+        separatorBuilder: (BuildContext context, int index) =>
+            index % 2 == 0 ? divider1 : divider2,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
