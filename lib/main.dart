@@ -50,7 +50,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
+class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -74,22 +74,22 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
 
   @override
   @mustCallSuper
-  void initState(){
+  void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this); //注册监听器
   }
 
   @override
   @mustCallSuper
-  void dispose(){
+  void dispose() {
     super.dispose();
     WidgetsBinding.instance.removeObserver(this); //移出监听器
   }
 
   @override
-  void didChangeAppLifecycleState(AppLifecycleState state){
-    print("$state");//打印生命周期事件
-    if(state == AppLifecycleState.resumed){
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    print("$state"); //打印生命周期事件
+    if (state == AppLifecycleState.resumed) {
       // do something
     }
   }
@@ -104,8 +104,10 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
     // than having to individually change instances of widgets.
 
     //定义富文本样式
-    TextStyle greenStyle = TextStyle(fontWeight: FontWeight.normal, fontSize: 20, color: Colors.green);
-    TextStyle redStyle = TextStyle(fontWeight: FontWeight.normal, fontSize: 18, color: Colors.red);
+    TextStyle greenStyle = TextStyle(
+        fontWeight: FontWeight.normal, fontSize: 20, color: Colors.green);
+    TextStyle redStyle = TextStyle(
+        fontWeight: FontWeight.normal, fontSize: 18, color: Colors.red);
 
     return Scaffold(
       appBar: AppBar(
@@ -113,7 +115,20 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+/*
+0308 备份代码
+
+body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
@@ -155,15 +170,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver{
               placeholder: (context, url) => CircularProgressIndicator(),
               errorWidget: (context, url, error) => Icon(Icons.error),
             )
-
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
+*/
