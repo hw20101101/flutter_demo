@@ -119,18 +119,27 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: ListView.separated(
-        itemCount: 10,
-
-        //列表项构造器
-        itemBuilder: (BuildContext context, int index) => ListTile(
-          title: Text('index: $index'),
+      body: CustomScrollView(slivers: <Widget>[
+        SliverAppBar(
+          //SliverAppBar 作为头图控件
+          title: Text('CustomScrollView Demo'), // 标题
+          floating: true, // 设置悬浮样式
+          flexibleSpace: Image.network(
+              "https://i04piccdn.sogoucdn.com/dff1358e060dff68",
+              fit: BoxFit.cover), // 设置悬浮头图背景
+          expandedHeight: 150, // 头图控件高度
         ),
-
-        //分割线构造器
-        separatorBuilder: (BuildContext context, int index) =>
-            index % 2 == 0 ? divider1 : divider2,
-      ),
+        SliverList(
+          //SliverList 作为列表控件
+          delegate: SliverChildBuilderDelegate(
+            (context, index) => ListTile(
+              title: Text('Item #$index'),
+              subtitle: Text('subtitle $index'),
+            ), // 列表项创建方法
+            childCount: 20, // 列表元素个数
+          ),
+        ),
+      ]),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
