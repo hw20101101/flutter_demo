@@ -115,7 +115,28 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: ListView(
+      body: ListView.builder(
+        itemCount: 10,
+        itemExtent: 50,
+        itemBuilder: (BuildContext content, int index) => ListTile(
+          title: Text('title $index'),
+          subtitle: Text('body $index'),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+/*
+
+0308 备份代码2
+
+body: ListView(
         scrollDirection: Axis.horizontal,
         itemExtent: 100,
         children: <Widget>[
@@ -125,15 +146,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
           Container(color: Colors.red)
         ],
       ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
+ */
 
 /*
 0308 备份代码
