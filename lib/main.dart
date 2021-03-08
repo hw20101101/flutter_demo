@@ -115,6 +115,16 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+      body: ListView(
+        scrollDirection: Axis.horizontal,
+        itemExtent: 100,
+        children: <Widget>[
+          Container(color: Colors.white),
+          Container(color: Colors.green),
+          Container(color: Colors.yellow),
+          Container(color: Colors.red)
+        ],
+      ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
