@@ -162,18 +162,16 @@ class _ScrollControllerState extends State<ScrollControllerWidget> {
       body: Column(
         children: <Widget>[
           Container(
-            height: 40,
-            child: RaisedButton(
-              onPressed: (isToTop
-                  ? () {
-                      if (isToTop) {
-                        _controller.animateTo(.0,
-                            duration: Duration(milliseconds: 200),
-                            curve: Curves.ease);
-                      }
-                    }
-                  : null),
-              child: Text('top'),
+            child: Text('aaaa'),
+            padding: EdgeInsets.all(18), //内边距
+            margin: EdgeInsets.all(44), //外边距
+            width: 100,
+            height: 100,
+            alignment: Alignment.center, //子widget居中对齐
+            decoration: BoxDecoration(
+              //设置Container的样式
+              color: Colors.red, //背景色
+              borderRadius: BorderRadius.circular(10), //圆角
             ),
           ),
           Expanded(
