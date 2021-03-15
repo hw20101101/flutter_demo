@@ -165,15 +165,17 @@ class _ScrollControllerState extends State<ScrollControllerWidget> {
       body: Column(
         children: <Widget>[
           Container(
-            child: Text(
-              'container（容器）在 UI 框架中是一个很常见的概念',
-              style: textStyle, //设置文本的颜色和字体大小
+            child: Center(
+              child: Text(
+                'container（容器）在 UI 框架中是一个很常见的概念',
+                style: textStyle,
+              ), //设置文本的颜色和字体大小
             ),
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(10), //外边距
-            width: 200,
-            height: 100,
-            alignment: Alignment.center, //子widget居中对齐
+            padding: EdgeInsets.all(18),
+            margin: EdgeInsets.all(40), //外边距
+            width: 180,
+            height: 240,
+            //alignment: Alignment.center, //子widget居中对齐
             decoration: BoxDecoration(
               //设置Container的样式
               color: Colors.red, //背景色
