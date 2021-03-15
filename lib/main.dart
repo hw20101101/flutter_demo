@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'custom.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,13 +39,14 @@ class MyHomePage extends StatelessWidget {
   //_MyHomePageState createState() => _MyHomePageState();
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
           body: TabBarView(
             children: [
               ParallelWidget(),
               ScrollNotificationWidget(),
-              ScrollControllerWidget()
+              ScrollControllerWidget(),
+              CustomControllerWidget()
             ],
           ),
           bottomNavigationBar: TabBar(
@@ -60,6 +62,10 @@ class MyHomePage extends StatelessWidget {
               Tab(
                 icon: Icon(Icons.perm_identity),
                 text: 'controller',
+              ),
+              Tab(
+                icon: Icon(Icons.sanitizer),
+                text: '自定义',
               )
             ],
             unselectedLabelColor: Colors.blueGrey,
