@@ -155,6 +155,9 @@ class _ScrollControllerState extends State<ScrollControllerWidget> {
 
   @override
   Widget build(BuildContext context) {
+    //定义文本控件的颜色和字体大小
+    var textStyle = TextStyle(color: Colors.white, fontSize: 16);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('scroll controller widget'),
@@ -162,10 +165,13 @@ class _ScrollControllerState extends State<ScrollControllerWidget> {
       body: Column(
         children: <Widget>[
           Container(
-            child: Text('aaaa'),
-            padding: EdgeInsets.all(18), //内边距
-            margin: EdgeInsets.all(44), //外边距
-            width: 100,
+            child: Text(
+              'container（容器）在 UI 框架中是一个很常见的概念',
+              style: textStyle, //设置文本的颜色和字体大小
+            ),
+            padding: EdgeInsets.all(10),
+            margin: EdgeInsets.all(10), //外边距
+            width: 200,
             height: 100,
             alignment: Alignment.center, //子widget居中对齐
             decoration: BoxDecoration(
