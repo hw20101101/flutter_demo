@@ -14,6 +14,8 @@ class _CustomControllerState extends State {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center, //设置主轴对齐方式
+      crossAxisAlignment: CrossAxisAlignment.end, //设置纵轴对齐方式
       children: <Widget>[
         Container(
           color: Colors.yellow,
