@@ -84,10 +84,17 @@ class AppUpdateItemWidth extends StatelessWidget {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(model.appDescription),
+              Text(
+                model.appDescription,
+                style: TextStyle(color: Colors.black),
+                maxLines: 2,
+              ),
               Padding(
                   padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                  child: Text("${model.appVersion} • ${model.appSize} MB"))
+                  child: Text(
+                    "${model.appVersion} • ${model.appSize} MB",
+                    style: TextStyle(color: Colors.black38),
+                  ))
             ]));
   }
 }

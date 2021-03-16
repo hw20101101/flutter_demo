@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage>
     var model = UpdateItemModel(
         appIcon: 'images/google_map.png',
         appDescription:
-            'Thanks for using Google Maps! Thanks for using Google Maps! ',
+            'Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.',
         appName: 'Google Maps',
         appSize: '18',
         appDate: '2020-12-12',
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage>
         children: [
           AppUpdateItemWidth(
             model: model,
-          )
+          ),
         ],
       ))),
     );
