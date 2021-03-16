@@ -1,8 +1,6 @@
-// import 'dart:html';
-
 import 'package:flutter/material.dart';
-//import 'package:cached_network_image/cached_network_image.dart';
 
+// Demo 中的第4个 TabController
 class CustomControllerWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
