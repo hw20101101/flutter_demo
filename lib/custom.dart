@@ -14,7 +14,7 @@ class _CustomControllerState extends State {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center, //设置主轴对齐方式
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly, //设置主轴对齐方式(等距)
       crossAxisAlignment: CrossAxisAlignment.end, //设置纵轴对齐方式
       children: <Widget>[
         Container(
@@ -26,7 +26,7 @@ class _CustomControllerState extends State {
           color: Colors.red,
           width: 60,
           height: 80,
-          margin: EdgeInsets.all(10), //设置边距
+          // margin: EdgeInsets.all(10), //设置边距
         ),
         Container(
           color: Colors.green,
@@ -37,7 +37,7 @@ class _CustomControllerState extends State {
           color: Colors.pink,
           width: 60,
           height: 80,
-          margin: EdgeInsets.all(10), //设置边距
+          // margin: EdgeInsets.all(10), //设置边距
         )
       ],
     );
