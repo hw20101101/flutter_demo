@@ -50,7 +50,7 @@ flutter:
   # 注意: 由于 yaml 文件对缩进严格，所以必须严格按照每一层两个空格的方式进行缩进，此处assets前面应有两个空格。
   assets:
      - images/girl.jpg
-  #   - images/a_dot_ham.jpeg
+     - images/google_map.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
