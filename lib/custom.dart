@@ -13,36 +13,29 @@ class CustomControllerWidget extends StatefulWidget {
 class _CustomControllerState extends State {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
       children: <Widget>[
-        Container(
-          color: Colors.green,
-          width: 60,
-          height: 80,
-        ),
-        Container(
-          color: Colors.purple,
-          width: 80,
-          height: 80,
-        ),
         Container(
           color: Colors.yellow,
           width: 60,
-          height: 80,
-          margin: EdgeInsets.all(10),
+          height: 60,
         ),
         Container(
           color: Colors.red,
-          width: 80,
+          width: 60,
           height: 80,
+          margin: EdgeInsets.all(10), //设置边距
         ),
-        Expanded(
-          child: Container(
-            color: Colors.yellowAccent,
-            width: 80,
-            height: 80,
-          ),
-          flex: 1, // 因为设置了 flex=1，所以宽度由 Expanded 来分配
+        Container(
+          color: Colors.green,
+          width: 60,
+          height: 60,
+        ),
+        Container(
+          color: Colors.pink,
+          width: 60,
+          height: 80,
+          margin: EdgeInsets.all(10), //设置边距
         )
       ],
     );
