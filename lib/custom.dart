@@ -13,31 +13,29 @@ class CustomControllerWidget extends StatefulWidget {
 class _CustomControllerState extends State {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly, //设置主轴对齐方式(等距)
-      crossAxisAlignment: CrossAxisAlignment.end, //设置纵轴对齐方式
+    return Stack(
+      //层叠容器
       children: <Widget>[
         Container(
-          color: Colors.yellow,
-          width: 60,
-          height: 60,
-        ),
-        Container(
+          // 红色背景
           color: Colors.red,
-          width: 60,
-          height: 80,
-          // margin: EdgeInsets.all(10), //设置边距
+          width: 300,
+          height: 120,
         ),
-        Container(
-          color: Colors.green,
-          width: 60,
-          height: 60,
-        ),
-        Container(
-          color: Colors.pink,
-          width: 60,
-          height: 80,
-          // margin: EdgeInsets.all(10), //设置边距
+        Positioned(
+            // 叠加在红色容器之上的黄色背景
+            left: 18,
+            top: 25,
+            child: Container(
+              color: Colors.yellow,
+              width: 60,
+              height: 60,
+            )),
+        Positioned(
+          // 叠加在黄色容器之上的文本
+          child: Text('stack 提供了层叠布局的容器'),
+          left: 18,
+          top: 90,
         )
       ],
     );
