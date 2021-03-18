@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage>
   Widget build(BuildContext context) {
     //设置数据模型
     var model = UpdateItemModel(
-        appIcon: 'images/google_map.png',
+        appIcon: 'images/icon_setting_sence_model.png',
         appDescription:
             'Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.',
         appName: 'Google Maps',

@@ -51,6 +51,8 @@ flutter:
   assets:
      - images/girl.jpg
      - images/google_map.png
+     - images/icon_play_lightOn_blue.png
+     - images/icon_setting_sence_model.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
