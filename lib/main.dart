@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/services.dart';
 import 'custom.dart';
 import 'appStoreStudy/AppUpdateItemWidth.dart';
 import 'appStoreStudy/AppUpdateItemModel.dart';
@@ -37,13 +38,16 @@ class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   void initState() {
     super.initState();
+
+    //读取并打印 json 文件内容
+    rootBundle.loadString('assets/test.json').then((value) => print(value));
   }
 
   @override
   Widget build(BuildContext context) {
     //设置数据模型
     var model = UpdateItemModel(
-        appIcon: 'images/icon_setting_sence_model.png',
+        appIcon: 'assets/images/home/icon_home_cloud.png',
         appDescription:
             'Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.',
         appName: 'Google Maps',

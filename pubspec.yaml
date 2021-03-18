@@ -49,10 +49,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   # 注意: 由于 yaml 文件对缩进严格，所以必须严格按照每一层两个空格的方式进行缩进，此处assets前面应有两个空格。
   assets:
-     - images/girl.jpg
-     - images/google_map.png
-     - images/icon_play_lightOn_blue.png
-     - images/icon_setting_sence_model.png
+     - assets/images/girl.jpg  # 指定单个图片资源
+     - assets/images/google_map.png
+     - assets/images/icon_play_lightOn_blue.png
+     - assets/images/icon_setting_sence_model.png
+     - assets/images/home/ # 批量指定子目录中的图片资源
+     - assets/test.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
